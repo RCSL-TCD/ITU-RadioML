@@ -1,0 +1,53 @@
+### INFO ###
+The format for the submission must be a zipfile including:
+ - This filled out form
+ - Full source code for end-to-end reproducibility
+ - Dockerfile-based environment setup
+   (we suggest to base your submission on this sandbox repository)
+ - Exported .onnx model with batch size = 1
+ - Trained .pth checkpoint
+
+### FILL IN ###
+# Overall test accuracy reached:
+-> 0.561320 (#28)
+
+# Inference cost score reached:
+-> 0.145853
+
+# Complete output dictionary printed by the inference_cost() function:
+-> {
+  "discount_sparsity": true,
+  "mem_o_FLOAT32": 105888.0,
+  "mem_w_SCALEDINT3": 67283.0,
+  "mem_w_SCALEDINT4": 8831.0,
+  "mem_w_SCALEDINT8": 2274.0,
+  "op_mac_SCALEDINT6_SCALEDINT4": 300032.0,
+  "op_mac_SCALEDUINT2_SCALEDINT3": 1581312.0,
+  "op_mac_SCALEDUINT3_SCALEDINT3": 1399161.0,
+  "op_mac_SCALEDUINT3_SCALEDINT4": 8538.0,
+  "op_mac_SCALEDUINT4_SCALEDINT3": 3373056.0,
+  "op_mac_SCALEDUINT4_SCALEDINT8": 2274.0,
+  "total_bops": 69932985.0,
+  "total_mem_o_bits": 3388416.0,
+  "total_mem_w_bits": 255365.0,
+  "unsupported": "set()"
+}
+model_cost_final.json file within the model/ directory
+
+# Path to .onnx model within this zipfile:
+-> model/
+
+# Path to .pth checkpoint within this zipfile:
+-> trainedmodel/
+
+# Link to GitHub repository containing your code 
+# (to be made public after submission deadline):
+-> github.com/RCL-TCD/ITU-RadioML.git
+
+# Instructions for reproduction:
+-> dataset_path = "/home/user/Documents/RadioML/GOLD_XYZ_OSC.0001_1024.hdf5" has the radioml dataset
+-> python radioml_final.py
+
+# Further comments:
+-> Tested in miniconda docker with the requirements installed as defined for the radioml-challenge docker - CentOS w/ GPU acceleration
+-> Validated in Ubuntu w/o GPU acceleration using provided radioml-challenge docker
