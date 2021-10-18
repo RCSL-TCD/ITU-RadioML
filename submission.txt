@@ -9,28 +9,27 @@ The format for the submission must be a zipfile including:
 
 ### FILL IN ###
 # Overall test accuracy reached:
--> 0.562985
+-> 0.563407
 
 # Inference cost score reached:
--> 0.146417
+-> 0.143013
 
 # Complete output dictionary printed by the inference_cost() function:
 -> 
 {
   "discount_sparsity": true,
   "mem_o_FLOAT32": 105888.0,
-  "mem_w_SCALEDINT3": 67445.0,
-  "mem_w_SCALEDINT4": 8864.0,
-  "mem_w_SCALEDINT8": 2279.0,
-  "op_mac_SCALEDINT6_SCALEDINT4": 299008.0,
-  "op_mac_SCALEDUINT2_SCALEDINT3": 1584640.0,
-  "op_mac_SCALEDUINT3_SCALEDINT3": 1401613.0,
-  "op_mac_SCALEDUINT3_SCALEDINT4": 8572.0,
-  "op_mac_SCALEDUINT4_SCALEDINT3": 3411968.0,
-  "op_mac_SCALEDUINT4_SCALEDINT8": 2279.0,
-  "total_bops": 70417957.0,
+  "mem_w_SCALEDINT3": 67875.0,
+  "mem_w_SCALEDINT4": 11189.0,
+  "op_mac_SCALEDINT6_SCALEDINT4": 291840.0,
+  "op_mac_SCALEDUINT2_SCALEDINT3": 1584896.0,
+  "op_mac_SCALEDUINT3_SCALEDINT3": 1388905.0,
+  "op_mac_SCALEDUINT3_SCALEDINT4": 8671.0,
+  "op_mac_SCALEDUINT4_SCALEDINT3": 3393536.0,
+  "op_mac_SCALEDUINT4_SCALEDINT4": 2233.0,
+  "total_bops": 69875893.0,
   "total_mem_o_bits": 3388416.0,
-  "total_mem_w_bits": 256023.0,
+  "total_mem_w_bits": 248381.0,
   "unsupported": "set()"
 }
 model_cost_final.json file within the model/ directory
@@ -58,5 +57,6 @@ model_cost_final.json file within the model/ directory
  
 
 # Further comments:
--> Tested in miniconda docker with the requirements installed as defined for the radioml-challenge docker - Manjaro Linux w/ GPU acceleration (restrictions on installing docker)
--> Validated in Ubuntu w/o GPU acceleration using provided docker jupyter environment
+-> Tested in miniconda environment with the requirements installed as defined for the radioml-challenge docker - Manjaro Linux w/ GPU acceleration (Restrictions on installing docker at work machines) - requirements.txt attached for environment details.
+-> Validated in Ubuntu w/o GPU acceleration using provided docker environment
+-> submitted files are ones generated via miniconda docker. 
