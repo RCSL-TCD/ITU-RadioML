@@ -9,27 +9,27 @@ The format for the submission must be a zipfile including:
 
 ### FILL IN ###
 # Overall test accuracy reached:
--> 0.561320 (#28)
+-> 0.563407
 
 # Inference cost score reached:
--> 0.145853
+-> 0.143013
 
 # Complete output dictionary printed by the inference_cost() function:
--> {
+-> 
+{
   "discount_sparsity": true,
   "mem_o_FLOAT32": 105888.0,
-  "mem_w_SCALEDINT3": 67283.0,
-  "mem_w_SCALEDINT4": 8831.0,
-  "mem_w_SCALEDINT8": 2274.0,
-  "op_mac_SCALEDINT6_SCALEDINT4": 300032.0,
-  "op_mac_SCALEDUINT2_SCALEDINT3": 1581312.0,
-  "op_mac_SCALEDUINT3_SCALEDINT3": 1399161.0,
-  "op_mac_SCALEDUINT3_SCALEDINT4": 8538.0,
-  "op_mac_SCALEDUINT4_SCALEDINT3": 3373056.0,
-  "op_mac_SCALEDUINT4_SCALEDINT8": 2274.0,
-  "total_bops": 69932985.0,
+  "mem_w_SCALEDINT3": 67875.0,
+  "mem_w_SCALEDINT4": 11189.0,
+  "op_mac_SCALEDINT6_SCALEDINT4": 291840.0,
+  "op_mac_SCALEDUINT2_SCALEDINT3": 1584896.0,
+  "op_mac_SCALEDUINT3_SCALEDINT3": 1388905.0,
+  "op_mac_SCALEDUINT3_SCALEDINT4": 8671.0,
+  "op_mac_SCALEDUINT4_SCALEDINT3": 3393536.0,
+  "op_mac_SCALEDUINT4_SCALEDINT4": 2233.0,
+  "total_bops": 69875893.0,
   "total_mem_o_bits": 3388416.0,
-  "total_mem_w_bits": 255365.0,
+  "total_mem_w_bits": 248381.0,
   "unsupported": "set()"
 }
 model_cost_final.json file within the model/ directory
@@ -45,9 +45,17 @@ model_cost_final.json file within the model/ directory
 -> github.com/RCL-TCD/ITU-RadioML.git
 
 # Instructions for reproduction:
--> dataset_path = "/home/user/Documents/RadioML/GOLD_XYZ_OSC.0001_1024.hdf5" has the radioml dataset
--> python radioml_final.py
+-> On Miniconda
+--> assuming docker environment setup inside "/home/user/Documents/RadioML"
+--> conda activate 'environment' (conda create environment python=3.8 pip --file requirements.txt}
+--> dataset_path = "/home/user/Documents/RadioML/GOLD_XYZ_OSC.0001_1024.hdf5" is the radioml dataset
+--> place python file at the base folder of the environment (i.e., "/home/user/Documents/RadioML"
+--> python radioml_final.py
+
+-> On provided docker environment
+--> Use the final_submission_model.ipynb
+ 
 
 # Further comments:
--> Tested in miniconda docker with the requirements installed as defined for the radioml-challenge docker - CentOS w/ GPU acceleration
--> Validated in Ubuntu w/o GPU acceleration using provided radioml-challenge docker
+-> Tested in miniconda docker with the requirements installed as defined for the radioml-challenge docker - Manjaro Linux w/ GPU acceleration (restrictions on installing docker)
+-> Validated in Ubuntu w/o GPU acceleration using provided docker jupyter environment
