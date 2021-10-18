@@ -147,7 +147,7 @@ filters_dense_1 = 104
 # Original Adjustable hyperparameters
 input_bits = 6 #final highest accuracy at input quant of 6
 #a_bits = 8 #unused since expanded out
-w_bits = 4 #only used in final dense layer
+w_bits = 8 #only used in final dense layer
 filters_conv = 52 #convolution layer-base
 filters_dense = 96 #dense layer - base
 
